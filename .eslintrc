@@ -1,0 +1,41 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "no-unused-vars": 0,
+      "newline-before-return": "error",
+      "semi": "error",
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": ["if", "break", "case", "switch", "for", "const", "let"]
+        }
+      ],
+      "@typescript-eslint/typedef": [
+        "error",
+        {
+          "arrayDestructuring": true,
+          "arrowParameter": true,
+          "memberVariableDeclaration": true,
+          "objectDestructuring": true,
+          "parameter": true,
+          "propertyDeclaration": true,
+          "variableDeclaration": true
+        }
+      ],
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/explicit-member-accessibility": "error"
+    }
+  }
